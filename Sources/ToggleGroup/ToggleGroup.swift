@@ -1,1 +1,1 @@
-class ToggleGroup { }
+public class ToggleGroup { }

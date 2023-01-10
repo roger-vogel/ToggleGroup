@@ -11,10 +11,10 @@ import Extensions
 
 public struct ToggleColors {
     
-    var selectedForeground: UIColor?
-    var selectedBackground: UIColor?
-    var unselectedForeground: UIColor?
-    var unselectedBackground: UIColor?
+    public var selectedForeground: UIColor?
+    public var selectedBackground: UIColor?
+    public var unselectedForeground: UIColor?
+    public var unselectedBackground: UIColor?
 }
 
 public class ToggleButton: UIButton {
