@@ -8,7 +8,6 @@
 import UIKit
 import Extensions
 
-
 public struct ToggleColors {
     
     public var selectedForeground: UIColor?

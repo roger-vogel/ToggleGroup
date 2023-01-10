@@ -16,6 +16,7 @@ public class ButtonGroupView: UIView {
     // MARK: - PROPERTIES
     public var radioType: RadioType = .open
 
+    // MARK: - COMPUTED PROPERTIES
     public var toggleGroup: [ToggleButton]?
     
     public var toggledButtons: [ToggleButton] {
@@ -40,10 +41,10 @@ public class ButtonGroupView: UIView {
     }
         
     public var toggledButtonTag: Int? {
-    
-    for button in toggleGroup! {  if button.isOn { return button.tag } }
-    return nil
-}
+        
+        for button in toggleGroup! {  if button.isOn { return button.tag } }
+        return nil
+    }
     
     // MARK: - METHODS
     public func initToggleButtons(isCheckBox: Bool, withTint: UIColor) {

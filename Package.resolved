@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "extensions",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/roger-vogel/Extensions.git",
+      "state" : {
+        "revision" : "7fccdea8863bd1e2e8ff2783337c034fabb4ed3c",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}
