@@ -14,6 +14,14 @@ public struct ToggleColors {
     public var selectedBackground: UIColor?
     public var unselectedForeground: UIColor?
     public var unselectedBackground: UIColor?
+    
+    public init(selectedForeground: UIColor, selectedBackground: UIColor, unselectedForegroud: UIColor, unselectedBackground: UIColor) {
+        
+        self.selectedForeground = selectedForeground
+        self.selectedBackground = selectedBackground
+        self.unselectedForeground = unselectedForegroud
+        self.unselectedBackground = unselectedBackground
+    }
 }
 
 public class ToggleButton: UIButton {
