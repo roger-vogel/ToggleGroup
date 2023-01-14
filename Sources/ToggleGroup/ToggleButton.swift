@@ -30,18 +30,10 @@ public class ToggleButton: UIButton {
     public var isOn = false
     public var isCheckBox = false
     public var boxTint: UIColor = .green
-    public var groupView: ButtonGroupView?
     public var theSelectedImage: UIImage?
     public var theUnselectedImage: UIImage?
     public var theToggleColors: ToggleColors?
    
-    // MARK: - COMPUTED PROPERTIES
-    public var isInRadioGroup: RadioType {
-        
-        get { return groupView!.radioType }
-        set { groupView!.radioType = newValue }
-    }
-        
     // MARK: - METHODS
     public func initToggle(isCheckBox: Bool? = false, boxTint: UIColor? = .green) {
         

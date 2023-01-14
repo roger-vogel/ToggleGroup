@@ -71,8 +71,6 @@ public class ButtonGroupView: UIView {
         
         self.toggleGroup = toggleGroup
         self.radioType = radioType!
-    
-        if toggleGroup != nil { for toggleButton in toggleGroup! { toggleButton.groupView = self } }
     }
     
     public func setSelection(_ button: ToggleButton, state: Bool? = true) {
