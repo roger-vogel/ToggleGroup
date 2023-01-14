@@ -15,6 +15,7 @@ public class ButtonGroupView: UIView {
     
     // MARK: - PROPERTIES
     public var radioType: RadioType = .open
+    public var isEnabled: Bool = true
 
     // MARK: - COMPUTED PROPERTIES
     public var toggleGroup: [ToggleButton]?
@@ -93,6 +94,8 @@ public class ButtonGroupView: UIView {
     public func enableGroup(_ state: Bool) {
         
         if toggleGroup != nil {
+            
+            isEnabled = state
             
             for button in toggleGroup! {
                 
