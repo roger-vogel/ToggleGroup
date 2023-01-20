@@ -35,7 +35,7 @@ public class ToggleButton: UIButton {
     public var theToggleColors: ToggleColors?
    
     // MARK: - METHODS
-    public func initToggle(isCheckBox: Bool? = false, boxTint: UIColor? = .green) {
+    public func initToggle(isCheckBox: Bool? = false, boxTint: UIColor? = .darkGray) {
         
         self.isCheckBox = isCheckBox!
         self.boxTint = boxTint!
