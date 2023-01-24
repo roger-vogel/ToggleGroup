@@ -42,7 +42,11 @@ public class ToggleButton: UIButton {
     public var theTints: ToggleTints?
    
     // MARK: - METHODS
-    public func initToggle(tints: ToggleTints) { theTints = tints }
+    public func initToggle(image: UIImage, tints: ToggleTints) {
+        
+        self.setImage(image, for: .normal)
+        theTints = tints
+    }
         
     public func initToggle(isCheckBox: Bool? = false, boxTint: UIColor? = .darkGray) {
         
