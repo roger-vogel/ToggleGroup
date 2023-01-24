@@ -28,6 +28,12 @@ public struct ToggleTints {
     
     public var selectedTint: UIColor?
     public var unselecteTint: UIColor?
+    
+    public init(selectedTint: UIColor, unselectedTint: UIColor) {
+        
+        self.selectedTint = selectedTint
+        self.unselecteTint = unselectedTint
+    }
 }
 
 public class ToggleButton: UIButton {
