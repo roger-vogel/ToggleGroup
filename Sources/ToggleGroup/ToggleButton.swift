@@ -24,17 +24,26 @@ public struct ToggleColors {
     }
 }
 
+public struct ToggleTints {
+    
+    public var selectedTint: UIColor?
+    public var unselecteTint: UIColor?
+}
+
 public class ToggleButton: UIButton {
 
     // MARK: - PROPERTIES
     public var isOn = false
     public var isCheckBox = false
-    public var boxTint: UIColor = .green
+    public var boxTint: UIColor?
     public var theSelectedImage: UIImage?
     public var theUnselectedImage: UIImage?
     public var theToggleColors: ToggleColors?
+    public var theTints: ToggleTints?
    
     // MARK: - METHODS
+    public func initToggle(tints: ToggleTints) { theTints = tints }
+        
     public func initToggle(isCheckBox: Bool? = false, boxTint: UIColor? = .darkGray) {
         
         self.isCheckBox = isCheckBox!
@@ -67,10 +76,10 @@ public class ToggleButton: UIButton {
         if isCheckBox {
             
             let theSelectedImage = UIImage(systemName: "checkmark.circle.fill", withConfiguration: UIImage.SymbolConfiguration(scale: .large))!
-            theSelectedImage.withTintColor(boxTint)
+            theSelectedImage.withTintColor(boxTint!)
             
             let theUnselectedImage = UIImage(systemName: "circle", withConfiguration: UIImage.SymbolConfiguration(scale: .large))!
-            theUnselectedImage.withTintColor(boxTint)
+            theUnselectedImage.withTintColor(boxTint!)
             
             if isOn { setImage(theSelectedImage, for: .normal) }
             else { setImage(theUnselectedImage, for: .normal) }
@@ -78,7 +87,7 @@ public class ToggleButton: UIButton {
             return
         }
     
-        if theSelectedImage != nil && theUnselectedImage != nil {
+        else if theSelectedImage != nil && theUnselectedImage != nil {
             
             if isOn { self.setImage(theSelectedImage!, for: .normal) }
             else { self.setImage(theUnselectedImage!, for: .normal) }
@@ -86,7 +95,7 @@ public class ToggleButton: UIButton {
             return
         }
         
-        if theToggleColors != nil {
+        else if theToggleColors != nil {
             
             if isOn {
                 
@@ -98,6 +107,11 @@ public class ToggleButton: UIButton {
                 self.setTitleColor(theToggleColors!.unselectedForeground, for: .normal)
                 self.backgroundColor = theToggleColors!.unselectedBackground
             }
+            
+        } else if theTints != nil {
+            
+            if isOn { self.tintColor = theTints!.selectedTint }
+            else { self.tintColor = theTints!.unselecteTint}
         }
     }
 }
